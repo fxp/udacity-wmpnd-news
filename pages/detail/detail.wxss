@@ -1,0 +1,73 @@
+/* pages/detail/detail.wxss */
+
+.navBar{
+  /* background: linear-gradient(to bottom, rgb(244, 244, 244), rgb(244,244,244));  */
+  background: white; 
+  width:100%;
+  position: fixed;
+  top: 0rpx;
+  height: 130rpx;
+  border-bottom: 1px solid rgb(25,149,211);
+  z-index: 10;
+}
+
+.head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 30rpx;
+  margin-top:45rpx;
+  font-size: 28rpx;
+  color:rgba(0, 0, 0, 0.9);
+}
+
+.icon{
+  height:60rpx;
+  width:60rpx;
+  margin-right:20rpx;
+}
+
+.news {
+  margin-top:150rpx
+}
+
+.news-title{
+  padding: 30rpx 30rpx;
+}
+
+.news-meta{
+  padding: 0 30rpx 30rpx 30rpx;
+  display: flex;
+  font-size: 22rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.news-date{
+  margin-left:20rpx
+}
+
+.news-readcount{
+  margin-left: auto;
+}
+
+.news-content{
+  padding:30rpx;
+  font-size: 30rpx;
+  color:  rgba(0, 0, 0, 0.7);
+}
+
+.news-content p {
+  margin-top: 20rpx;
+  display: block;
+}
+
+.news-content strong {
+  margin-top: 20rpx;
+  display: block;
+  font-weight: bold;
+}
+
+.news-content image {
+  margin-top: 20rpx;
+  width:100%;
+}

@@ -1,0 +1,27 @@
+<!--pages/detail/detail.wxml-->
+<view class='navBar'>
+  <view class='head' bindtap='navBack'>
+    <image class='icon' src='../../images/left-arrow.png'></image>
+    快读∙资讯
+  </view>
+</view>
+
+<view class='news'>
+  <view class='news-title'>{{news.title}}</view>
+  
+  <view class='news-meta'>
+    <view class='news-source'>{{news.source}}</view>
+    <view class='news-date'>{{news.date}}</view>
+    <view class='news-readcount'>{{news.readCount}}</view>
+  </view>
+
+  <view class='news-content' >
+    <block wx:for='{{news.content}}'>
+      <div wx:if='{{item.type == "strong"}}'><strong>{{item.text}}</strong></div>
+      <div wx:elif='{{item.type == "p"}}'><p>{{item.text}}</p></div>
+      <div wx:elif='{{item.type == "image"}}'><image src="{{item.src}}"></image></div>
+      <div wx:else>{{item.type}}{{item.text}}</div>
+    </block>
+  </view>
+
+</view>
