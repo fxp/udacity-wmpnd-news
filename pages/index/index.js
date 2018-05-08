@@ -24,12 +24,6 @@ Page({
     LOADING_MIN: 500,
     PLACEHOLDER_IMAGE: '../../images/placeholder.jpg'
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../detail/detail?id=1523074607634'
-    })
-  },
   onCategoryChange: function (event) {
     /**
      * 改变当前显示的新闻的类型
