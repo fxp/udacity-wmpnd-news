@@ -16,7 +16,7 @@
   </view>
 
   <view class='news-content' >
-    <block wx:for='{{news.content}}'>
+    <block wx:for='{{news.content}}' wx:key='id'>
       <div wx:if='{{item.type == "strong"}}'><strong>{{item.text}}</strong></div>
       <div wx:elif='{{item.type == "p"}}'><p>{{item.text}}</p></div>
       <div wx:elif='{{item.type == "image"}}'><image src="{{item.src}}"></image></div>

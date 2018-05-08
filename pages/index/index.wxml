@@ -1,10 +1,14 @@
+<view class='top'>
+<image class='topLoading' src='../../images/loading.gif'></image>
+</view>
+
 <view class='navBar'>
   <view class='head'>
     <image class='icon' src='../../images/icon.png'></image>
     快读∙资讯
   </view>
   <view class='tagPanel'>
-    <view wx:for='{{tags}}' 
+    <view wx:for='{{tags}}' wx:key='*this'
       data-id='{{index}}' 
       bindtap='onCategoryChange'
       class="tagTitle {{index == currentTag? 'tagActive':''}}" >
@@ -14,7 +18,7 @@
 </view>
 <view class='index'>
   <view class='content'>
-    <view wx:for='{{newsList}}' class='list-item'>
+    <view wx:for='{{newsList}}' wx:key='id' class='list-item'>
       <view bindtap='showDetail' class='list-item-content news_content'
        data-newsid='{{item.id}}'>
         <view class='list-item-left'>

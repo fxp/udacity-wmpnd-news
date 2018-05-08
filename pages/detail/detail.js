@@ -1,5 +1,5 @@
 // pages/detail/detail.js
-
+const util = require('../../utils/util.js')
 const moment = require('../../utils/moment-with-locales.min.js')
 
 Page({
@@ -11,34 +11,22 @@ Page({
 
   navBack: function () {
     // TODO: if there's no prev page?
-    console.log('back')
     wx.navigateBack()
   },
 
   showNews: function (id) {
-    return new Promise((resolve, reject) => {
-      wx.request({
-        url: 'https://test-miniprogram.com/api/news/detail?id=' + id,
-        data: {},
-        method: 'GET',
-        success: res => {
-          resolve(res.data.result)
-        },
-        fail: error => {
-          reject(error)
-        }
-      })
-    })
+    return util.news.getById(id)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('detail', options)
+    /**
+     * 加载新闻详情页面
+     */
     this.showNews(options.id)
       .then(news => {
-        console.log(news)
         news.source = news.source || "未知来源"
         news.date = moment(news.date).locale('zh-cn').fromNow()
 
